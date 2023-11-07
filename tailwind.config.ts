@@ -7,13 +7,6 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
-    },
     fontFamily: {
       sans: ["var(--font-geist-sans)"],
       mono: ["var(--font-geist-mono)"],
@@ -56,6 +49,12 @@ const config: Config = {
         light: "##eb367f",
         DEFAULT: "##ff0080",
         dark: "##fff500",
+      },
+      purple: {
+        lighter: "#e3d7fc",
+        light: "#8a63d2",
+        DEFAULT: "#7928ca",
+        dark: "#4c2889",
       },
     },
   },

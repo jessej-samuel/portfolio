@@ -11,12 +11,18 @@ interface SocialsProps {
 
 const Socials = ({ copy }: SocialsProps) => {
   return (
-    <div className="w-full flex items-center justify-evenly transition-all">
+    <div className="w-full flex items-center justify-evenly">
       <Link href="https://github.com/jessej-samuel" target="_blank">
-        <Github className="hover:cursor-pointer hover:scale-105" />
+        <Github
+          className="cursor-none hover:scale-150 transition-all"
+          size={20}
+        />
       </Link>
       <Link href={"https://twitter.com/CodeRxJesseJ"} target="_blank">
-        <Twitter className="hover:cursor-pointer hover:scale-105" />
+        <Twitter
+          className="cursor-none hover:scale-150 transition-all"
+          size={20}
+        />
       </Link>
       <Link
         href={
@@ -24,18 +30,21 @@ const Socials = ({ copy }: SocialsProps) => {
         }
         target="_blank"
       >
-        <Music className="hover:cursor-pointer hover:scale-105" />
+        <Music
+          className="cursor-none hover:scale-150 transition-all"
+          size={20}
+        />
       </Link>
       <Image
         src={"/discord.svg"}
-        width={28}
-        height={28}
+        width={20}
+        height={20}
         alt="discord"
         onClick={() => {
           copy("coderxjessej");
           toast.success("Copied Discord ID to clipboard!");
         }}
-        className="hover:cursor-pointer hover:scale-105"
+        className="cursor-none hover:scale-150 transition-all"
       />
     </div>
   );

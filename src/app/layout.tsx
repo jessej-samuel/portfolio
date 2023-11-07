@@ -18,19 +18,7 @@ export default function RootLayout({
       <body
         className={`${GeistSans.className} max-w-4xl bg-geist-0 text-geist min-h-screen mx-auto px-4 sm:px-6 md:px-8`}
       >
-        <div className="grid grid-cols-3">
-          <div className="px-8 py-4 border border-geist-200">
-            <Image
-              src={"/coder_pfp.png"}
-              width={100}
-              height={100}
-              alt="Jessej Samuel"
-              className="rounded-full border border-success-dark"
-            />
-            <h1 className="font-semibold text-2xl">Jessej Samuel</h1>
-          </div>
-          <div>{children}</div>
-        </div>
+        {children}
       </body>
     </html>
   );

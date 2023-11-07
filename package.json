@@ -9,13 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@geist-ui/core": "^2.3.8",
+    "@geist-ui/icons": "^1.0.2",
     "feather-icons": "^4.29.1",
     "feather-icons-react": "^0.6.2",
     "geist": "^1.0.0",
     "next": "14.0.1",
     "particles.js": "^2.0.0",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-hot-toast": "^2.4.1",
+    "usehooks-ts": "^2.9.1"
   },
   "devDependencies": {
     "@types/node": "^20",

@@ -20,7 +20,7 @@ export default function RootLayout({
       <body
         className={`${GeistSans.className}  text-geist min-h-screen bg-gradient-to-br from-geist-0 via-geist-100 to-geist-100 cursor-none`}
       >
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 md:px-8 min-h-screen">
+        <div className="">
           <Toaster
             position="bottom-right"
             toastOptions={{
@@ -32,7 +32,6 @@ export default function RootLayout({
               },
             }}
           />
-
           {children}
         </div>
       </body>

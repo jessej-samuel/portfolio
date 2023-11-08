@@ -27,7 +27,7 @@ export default function Home() {
         className="flex min-h-screen justify-center items-center"
         onClick={() => (clickSound ? clickSound.play() : null)}
       >
-        <div className="h-96 w-fit bg-geist-100 border-geist-200 border rounded-xl px-16 py-8 flex flex-col items-center justify-around">
+        <div className="h-96 w-fit bg-geist-100 border-geist-200 border rounded-xl px-6 py-6 flex flex-col items-center justify-around">
           <Image
             src={"/avatar.png"}
             width={200}

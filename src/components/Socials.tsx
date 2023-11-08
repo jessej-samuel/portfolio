@@ -53,6 +53,20 @@ const Socials = ({ copy, setCursorColor }: SocialsProps) => {
         onMouseEnter={() => setCursorColor("discord")}
         className="cursor-none transition-all"
       />
+      <Link
+        href={"https://www.linkedin.com/in/jessej-samuel-789b711b7/"}
+        target="_blank"
+      >
+        <Image
+          src={"/linkedin.svg"}
+          width={20}
+          height={20}
+          alt="linkedin"
+          onMouseLeave={() => setCursorColor("default")}
+          onMouseEnter={() => setCursorColor("linkedin")}
+          className="cursor-none transition-all"
+        />
+      </Link>
     </div>
   );
 };

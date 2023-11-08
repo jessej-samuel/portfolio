@@ -24,6 +24,11 @@ const variants = {
     scale: 3,
     border: "none",
   },
+  linkedin: {
+    backgroundColor: "#0A66C299",
+    scale: 3,
+    border: "none",
+  },
   default: {
     backgroundColor: "#ffffff00",
     border: "1px solid #fff",

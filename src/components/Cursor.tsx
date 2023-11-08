@@ -25,7 +25,8 @@ const variants = {
     border: "none",
   },
   default: {
-    backgroundColor: "#ffffff",
+    backgroundColor: "#ffffff00",
+    border: "1px solid #fff",
     scale: 1,
   },
 };

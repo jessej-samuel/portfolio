@@ -10,9 +10,8 @@ interface SocialsProps {
   setCursorColor: (color: string) => void;
 }
 const Socials = ({ copy, setCursorColor }: SocialsProps) => {
-
   return (
-    <div className="w-full flex items-center justify-evenly flex-wrap gap-3">
+    <div className="w-full flex items-center justify-evenly flex-wrap gap-2">
       <Link
         href="https://github.com/jessej-samuel"
         target="_blank"
@@ -28,23 +27,6 @@ const Socials = ({ copy, setCursorColor }: SocialsProps) => {
           className="rounded-full flex items-center justify-center p-3"
         >
           <Github className="cursor-none transition-all" size={16} />
-        </motion.div>
-      </Link>
-      <Link
-        href={"https://twitter.com/CodeRxJesseJ"}
-        target="_blank"
-        className="cursor-none transition-all"
-      >
-        <motion.div
-          whileHover={{
-            scale: 1.2,
-            backgroundColor: "#1DA1F299",
-          }}
-          onMouseEnter={() => setCursorColor("hidden")}
-          onMouseLeave={() => setCursorColor("default")}
-          className="rounded-full flex items-center justify-center p-3"
-        >
-          <Twitter className="cursor-none transition-all" size={16} />
         </motion.div>
       </Link>
       <Link

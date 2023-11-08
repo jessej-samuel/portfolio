@@ -11,11 +11,16 @@ import { useRef, useState } from "react";
 export default function Home() {
   const [copiedString, copy] = useCopyToClipboard();
   const [cursorColor, setCursorColor] = useState("default");
+  const clickSound = new Audio("/click.wav");
 
   return (
     <>
       <Cursor color={cursorColor} />
-      <main className="flex min-h-screen justify-center items-center">
+
+      <main
+        className="flex min-h-screen justify-center items-center"
+        onClick={() => clickSound.play()}
+      >
         <div className="h-96 w-fit bg-geist-100 border-geist-200 border rounded-xl px-16 py-8 flex flex-col items-center justify-around">
           <Image
             src={"/avatar.png"}

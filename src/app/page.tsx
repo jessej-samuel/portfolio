@@ -12,6 +12,7 @@ export default function Home() {
   const [copiedString, copy] = useCopyToClipboard();
   const [cursorColor, setCursorColor] = useState("default");
   const clickSound = new Audio("/click.wav");
+  const ouchSound = new Audio("/ouch.mp3");
 
   return (
     <>
@@ -28,6 +29,13 @@ export default function Home() {
             height={200}
             alt={"Jessej Samuel"}
             className="rounded-3xl"
+            onClick={(e) => {
+              ouchSound.play();
+
+              e.stopPropagation();
+            }}
+            onMouseEnter={() => setCursorColor("hidden")}
+            onMouseLeave={() => setCursorColor("default")}
           />
           <h1 className="text-2xl">Jessej Samuel</h1>
           <Socials copy={copy} setCursorColor={setCursorColor} />

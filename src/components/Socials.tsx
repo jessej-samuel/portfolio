@@ -3,11 +3,14 @@ import Link from "next/link";
 import Image from "next/image";
 import toast from "react-hot-toast";
 import { motion } from "framer-motion";
+import { useCopyToClipboard } from "react-use";
+import { useEffect } from "react";
 interface SocialsProps {
   copy: (text: string) => void;
   setCursorColor: (color: string) => void;
 }
 const Socials = ({ copy, setCursorColor }: SocialsProps) => {
+
   return (
     <div className="w-full flex items-center justify-evenly flex-wrap gap-3">
       <Link

@@ -3,25 +3,28 @@ import Link from "next/link";
 import Image from "next/image";
 import toast from "react-hot-toast";
 
-type CopyFunction = (text: string) => void;
-
 interface SocialsProps {
-  copy: CopyFunction;
+  copy: (text: string) => void;
+  setCursorColor: (color: string) => void;
 }
 
-const Socials = ({ copy }: SocialsProps) => {
+const Socials = ({ copy, setCursorColor }: SocialsProps) => {
   return (
     <div className="w-full flex items-center justify-evenly">
       <Link href="https://github.com/jessej-samuel" target="_blank">
         <Github
-          className="cursor-none hover:scale-150 transition-all"
+          className="cursor-none transition-all"
           size={20}
+          onMouseLeave={() => setCursorColor("default")}
+          onMouseEnter={() => setCursorColor("github")}
         />
       </Link>
       <Link href={"https://twitter.com/CodeRxJesseJ"} target="_blank">
         <Twitter
-          className="cursor-none hover:scale-150 transition-all"
+          className="cursor-none transition-all"
           size={20}
+          onMouseLeave={() => setCursorColor("default")}
+          onMouseEnter={() => setCursorColor("twitter")}
         />
       </Link>
       <Link
@@ -31,8 +34,10 @@ const Socials = ({ copy }: SocialsProps) => {
         target="_blank"
       >
         <Music
-          className="cursor-none hover:scale-150 transition-all"
+          className="cursor-none transition-all"
           size={20}
+          onMouseLeave={() => setCursorColor("default")}
+          onMouseEnter={() => setCursorColor("spotify")}
         />
       </Link>
       <Image
@@ -44,7 +49,9 @@ const Socials = ({ copy }: SocialsProps) => {
           copy("coderxjessej");
           toast.success("Copied Discord ID to clipboard!");
         }}
-        className="cursor-none hover:scale-150 transition-all"
+        onMouseLeave={() => setCursorColor("default")}
+        onMouseEnter={() => setCursorColor("discord")}
+        className="cursor-none transition-all"
       />
     </div>
   );

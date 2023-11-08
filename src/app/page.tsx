@@ -7,6 +7,7 @@ import { useCopyToClipboard } from "usehooks-ts";
 import Socials from "@/components/Socials";
 import Cursor from "@/components/Cursor";
 import { useEffect, useRef, useState } from "react";
+import ProfileCard from "@/components/ProfileCard";
 
 export default function Home() {
   const [copiedString, copy] = useCopyToClipboard();
@@ -24,28 +25,15 @@ export default function Home() {
       <Cursor color={cursorColor} />
 
       <main
-        className="flex min-h-screen justify-center items-center"
+        className="min-h-screen max-h-screen flex justify-center items-center 2xl:items-stretch 2xl:grid grid-cols-6 grid-rows-6 gap-2"
         onClick={() => (clickSound ? clickSound.play() : null)}
       >
-        <div className="h-96 w-fit bg-geist-100 border-geist-200 border rounded-xl px-6 py-6 flex flex-col items-center justify-around">
-          <Image
-            src={"/avatar.png"}
-            width={200}
-            height={200}
-            alt={"Jessej Samuel"}
-            className="rounded-3xl"
-            priority
-            onClick={(e) => {
-              ouchSound ? ouchSound.play() : null;
-
-              e.stopPropagation();
-            }}
-            onMouseEnter={() => setCursorColor("hidden")}
-            onMouseLeave={() => setCursorColor("default")}
-          />
-          <h1 className="text-2xl">Jessej Samuel</h1>
-          <Socials copy={copy} setCursorColor={setCursorColor} />
-        </div>
+        <ProfileCard
+          ouchSound={ouchSound}
+          setCursorColor={setCursorColor}
+          copy={copy}
+          className="col-start-2 row-start-2 col-span-1 row-span-3"
+        />
       </main>
     </>
   );

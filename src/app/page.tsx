@@ -11,7 +11,7 @@ import ProfileCard from "@/components/ProfileCard";
 
 export default function Home() {
   const [copiedString, copy] = useCopyToClipboard();
-  const [cursorColor, setCursorColor] = useState("default");
+  const [cursorState, setCursorState] = useState("default");
   const [clickSound, setClickSound] = useState<HTMLAudioElement>();
   const [ouchSound, setOuchSound] = useState<HTMLAudioElement>();
 
@@ -22,15 +22,21 @@ export default function Home() {
 
   return (
     <>
-      <Cursor color={cursorColor} />
+      <Cursor state={cursorState} />
 
       <main
         className="min-h-screen max-h-screen flex justify-center items-center 2xl:items-stretch 2xl:grid grid-cols-6 grid-rows-6 gap-2"
-        onClick={() => (clickSound ? clickSound.play() : null)}
+        onMouseDown={() => {
+          clickSound ? clickSound.play() : null;
+          setCursorState("down");
+        }}
+        onMouseUp={() => {
+          setCursorState("default");
+        }}
       >
         <ProfileCard
           ouchSound={ouchSound}
-          setCursorColor={setCursorColor}
+          setCursorState={setCursorState}
           copy={copy}
           className="col-start-2 row-start-2 col-span-1 row-span-3"
         />

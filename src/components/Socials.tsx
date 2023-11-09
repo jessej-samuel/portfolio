@@ -7,9 +7,9 @@ import { useCopyToClipboard } from "react-use";
 import { useEffect } from "react";
 interface SocialsProps {
   copy: (text: string) => void;
-  setCursorColor: (color: string) => void;
+  setCursorState: (color: string) => void;
 }
-const Socials = ({ copy, setCursorColor }: SocialsProps) => {
+const Socials = ({ copy, setCursorState }: SocialsProps) => {
   return (
     <div className="w-full flex items-center justify-evenly flex-wrap gap-2">
       <Link
@@ -22,8 +22,8 @@ const Socials = ({ copy, setCursorColor }: SocialsProps) => {
             scale: 1.2,
             backgroundColor: "#33333399",
           }}
-          onMouseEnter={() => setCursorColor("hidden")}
-          onMouseLeave={() => setCursorColor("default")}
+          onMouseEnter={() => setCursorState("hidden")}
+          onMouseLeave={() => setCursorState("default")}
           className="rounded-full flex items-center justify-center p-3"
         >
           <Github className="cursor-none transition-all" size={16} />
@@ -41,8 +41,8 @@ const Socials = ({ copy, setCursorColor }: SocialsProps) => {
             scale: 1.2,
             backgroundColor: "#1DB95499",
           }}
-          onMouseEnter={() => setCursorColor("hidden")}
-          onMouseLeave={() => setCursorColor("default")}
+          onMouseEnter={() => setCursorState("hidden")}
+          onMouseLeave={() => setCursorState("default")}
           className="rounded-full flex items-center justify-center p-3"
         >
           <Music
@@ -56,8 +56,8 @@ const Socials = ({ copy, setCursorColor }: SocialsProps) => {
           scale: 1.2,
           backgroundColor: "#7289DA99",
         }}
-        onMouseEnter={() => setCursorColor("hidden")}
-        onMouseLeave={() => setCursorColor("default")}
+        onMouseEnter={() => setCursorState("hidden")}
+        onMouseLeave={() => setCursorState("default")}
         className="rounded-full flex items-center justify-center p-3"
       >
         <Image
@@ -82,8 +82,8 @@ const Socials = ({ copy, setCursorColor }: SocialsProps) => {
             scale: 1.1,
             backgroundColor: "#0A66C299",
           }}
-          onMouseEnter={() => setCursorColor("hidden")}
-          onMouseLeave={() => setCursorColor("default")}
+          onMouseEnter={() => setCursorState("hidden")}
+          onMouseLeave={() => setCursorState("default")}
           className="rounded-full flex items-center justify-center p-3"
         >
           <Image

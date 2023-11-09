@@ -39,11 +39,15 @@ const variants = {
     scale: 0.4,
     backgroundColor: "#000",
   },
+  down: {
+    scale: 0.4,
+    backgroundColor: "#fff",
+  },
 };
 
-const Cursor = ({ color = "default" }) => {
+const Cursor = ({ state = "default" }) => {
   const ref = useRef(null);
-  const { docX, docY, posX, posY, elX, elY, elW, elH } = useMouse(ref);
+  const { docX, docY } = useMouse(ref);
 
   return (
     <motion.div
@@ -54,7 +58,7 @@ const Cursor = ({ color = "default" }) => {
         left: docX - 8,
       }}
       variants={variants}
-      animate={color}
+      animate={state}
     />
   );
 };

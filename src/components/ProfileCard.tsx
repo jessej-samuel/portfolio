@@ -3,14 +3,14 @@ import Socials from "./Socials";
 
 type ProfileCardProps = {
   ouchSound: HTMLAudioElement | undefined;
-  setCursorColor: React.Dispatch<React.SetStateAction<string>>;
+  setCursorState: React.Dispatch<React.SetStateAction<string>>;
   copy: (text: string) => void;
   className?: string;
 };
 
 const ProfileCard: React.FC<ProfileCardProps> = ({
   ouchSound,
-  setCursorColor,
+  setCursorState,
   copy,
   className,
 }) => {
@@ -34,11 +34,11 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
 
           e.stopPropagation();
         }}
-        onMouseEnter={() => setCursorColor("hidden")}
-        onMouseLeave={() => setCursorColor("default")}
+        onMouseEnter={() => setCursorState("hidden")}
+        onMouseLeave={() => setCursorState("default")}
       />
       <h1 className="text-2xl">Jessej Samuel</h1>
-      <Socials copy={copy} setCursorColor={setCursorColor} />
+      <Socials copy={copy} setCursorState={setCursorState} />
     </div>
   );
 };

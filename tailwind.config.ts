@@ -56,6 +56,14 @@ const config: Config = {
         DEFAULT: "#7928ca",
         dark: "#4c2889",
       },
+      lapis: "#15547F",
+      timberwolf: {
+        lighter: "#F7F8F8",
+        light: "#E5E7E7",
+        DEFAULT: "#D3D5D5",
+        dark: "#BFC1C1",
+      },
+      dimgray: "#6E6E6E",
     },
   },
 

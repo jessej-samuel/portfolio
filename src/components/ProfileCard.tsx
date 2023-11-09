@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Socials from "./Socials";
+import { motion } from "framer-motion";
 
 type ProfileCardProps = {
   ouchSound: HTMLAudioElement | undefined;

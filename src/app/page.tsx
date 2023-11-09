@@ -8,6 +8,7 @@ import Socials from "@/components/Socials";
 import Cursor from "@/components/Cursor";
 import { useEffect, useRef, useState } from "react";
 import ProfileCard from "@/components/ProfileCard";
+import Stats from "@/components/Stats";
 
 export default function Home() {
   const [copiedString, copy] = useCopyToClipboard();
@@ -39,6 +40,10 @@ export default function Home() {
           setCursorState={setCursorState}
           copy={copy}
           className="col-start-2 row-start-2 col-span-1 row-span-3 bg-gradient-to-tr from-geist-100 via-geist-200 to-geist-100"
+        />
+        <Stats
+          className="col-start-1 row-start-1 col-span-1 row-span-1 mt-2 ml-2"
+          setCursorState={setCursorState}
         />
       </main>
     </>

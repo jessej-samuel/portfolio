@@ -38,7 +38,7 @@ export default function Home() {
           ouchSound={ouchSound}
           setCursorState={setCursorState}
           copy={copy}
-          className="col-start-2 row-start-2 col-span-1 row-span-3"
+          className="col-start-2 row-start-2 col-span-1 row-span-3 bg-gradient-to-tr from-geist-100 via-geist-200 to-geist-100"
         />
       </main>
     </>

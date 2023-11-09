@@ -1,8 +1,7 @@
 // import { motion } from "framer-motion";
-import { RefObject, useEffect, useRef } from "react";
-import { useClickAway, useKey, useMeasure, useMouse, useSize } from "react-use";
+import { useRef } from "react";
+import { useMouse } from "react-use";
 import { motion } from "framer-motion";
-import { useClickAnyWhere } from "usehooks-ts";
 
 const variants = {
   github: {
@@ -42,6 +41,10 @@ const variants = {
   down: {
     scale: 0.4,
     backgroundColor: "#fff",
+  },
+  outLink: {
+    scale: 0.4,
+    backgroundColor: "#000",
   },
 };
 

@@ -5,6 +5,8 @@ import toast from "react-hot-toast";
 import { motion } from "framer-motion";
 import { useCopyToClipboard } from "react-use";
 import { useEffect } from "react";
+import { SiDiscord, SiGithub, SiLinkedin, SiSpotify } from "react-icons/si";
+
 interface SocialsProps {
   copy: (text: string) => void;
   setCursorState: (color: string) => void;
@@ -26,7 +28,10 @@ const Socials = ({ copy, setCursorState }: SocialsProps) => {
           onMouseLeave={() => setCursorState("default")}
           className="rounded-full flex items-center justify-center p-3"
         >
-          <Github className="cursor-none transition-all" size={16} />
+          <SiGithub
+            className="cursor-none transition-all w-fit aspect-square"
+            size={18}
+          />
         </motion.div>
       </Link>
       <Link
@@ -45,9 +50,9 @@ const Socials = ({ copy, setCursorState }: SocialsProps) => {
           onMouseLeave={() => setCursorState("default")}
           className="rounded-full flex items-center justify-center p-3"
         >
-          <Music
+          <SiSpotify
             className="cursor-none transition-all w-fit aspect-square"
-            size={16}
+            size={18}
           />
         </motion.div>
       </Link>
@@ -60,16 +65,13 @@ const Socials = ({ copy, setCursorState }: SocialsProps) => {
         onMouseLeave={() => setCursorState("default")}
         className="rounded-full flex items-center justify-center p-3"
       >
-        <Image
-          src={"/discord.svg"}
-          width={20}
-          height={20}
-          alt="discord"
+        <SiDiscord
           onClick={() => {
             copy("coderxjessej");
             toast.success("Copied Discord ID to clipboard!");
           }}
           className="cursor-none transition-all aspect-square"
+          size={18}
         />
       </motion.div>
       <Link
@@ -86,12 +88,9 @@ const Socials = ({ copy, setCursorState }: SocialsProps) => {
           onMouseLeave={() => setCursorState("default")}
           className="rounded-full flex items-center justify-center p-3"
         >
-          <Image
-            src={"/linkedin.svg"}
-            width={20}
-            height={20}
-            alt="linkedin"
+          <SiLinkedin
             className="cursor-none transition-all aspect-square"
+            size={18}
           />
         </motion.div>
       </Link>

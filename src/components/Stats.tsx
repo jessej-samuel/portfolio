@@ -47,7 +47,7 @@ const Stats = ({ className = "", setCursorState }: StatsProps) => {
         setCursorState("stats");
         e.stopPropagation();
       }}
-      className={`${className} p-5 font-medium text-black bg-gradient-to-tr from-white/60 via-geist-700/90 to-white/60 rounded-xl border border-dimgray`}
+      className={`${className} p-5 font-medium text-black bg-gradient-to-tr from-white/80 via-40% via-geist to-white/80 rounded-xl border border-dimgray shadow-xl`}
     >
       <div className="flex items-center gap-4 mb-2">
         <Image src={"/eye.svg"} width={24} height={24} alt="views icon" />

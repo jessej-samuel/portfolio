@@ -20,7 +20,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
       className={
         className +
         " " +
-        "bg-geist-100 border-geist-200 border rounded-xl px-6 py-6 flex flex-col items-center justify-around"
+        "bg-[#33032F] rounded-xl px-6 py-6 flex flex-col items-center justify-around"
       }
     >
       <Image

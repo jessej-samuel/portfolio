@@ -5,6 +5,7 @@ import Cursor from "@/components/Cursor";
 import { useEffect, useState } from "react";
 import ProfileCard from "@/components/ProfileCard";
 import Stats from "@/components/Stats";
+import Skills from "@/components/Skills";
 
 export default function Home() {
   const [copiedString, copy] = useCopyToClipboard();
@@ -35,12 +36,13 @@ export default function Home() {
           ouchSound={ouchSound}
           setCursorState={setCursorState}
           copy={copy}
-          className="col-start-2 row-start-2 col-span-2 row-span-3 bg-gradient-to-tr from-geist-100 via-geist-200 to-geist-100"
+          className="col-start-2 row-start-2 col-span-2 row-span-3"
         />
         <Stats
           className="col-start-1 row-start-1 col-span-1 row-span-1 mt-2 ml-2"
           setCursorState={setCursorState}
         />
+        <Skills className="col-start-4 row-start-1 col-span-3 row-span-2 mt-2"/>
       </main>
     </>
   );

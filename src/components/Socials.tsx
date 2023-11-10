@@ -22,7 +22,7 @@ const Socials = ({ copy, setCursorState }: SocialsProps) => {
         <motion.div
           whileHover={{
             scale: 1.2,
-            backgroundColor: "#33333399",
+            backgroundColor: "#000",
           }}
           onMouseEnter={() => setCursorState("hidden")}
           onMouseLeave={() => setCursorState("default")}

@@ -15,7 +15,6 @@ export default function Home() {
   useEffect(() => {
     setClickSound(new Audio("/click.wav"));
     setOuchSound(new Audio("/ouch.mp3"));
-    
   }, []);
 
   return (
@@ -23,7 +22,7 @@ export default function Home() {
       <Cursor state={cursorState} />
 
       <main
-        className="min-h-screen max-h-screen flex justify-center items-center 2xl:items-stretch 2xl:grid grid-cols-6 grid-rows-6 gap-2"
+        className="min-h-screen max-h-screen flex justify-center items-center 2xl:items-stretch 2xl:grid grid-cols-12 grid-rows-6 gap-2"
         onMouseDown={() => {
           clickSound ? clickSound.play() : null;
           setCursorState("down");
@@ -36,7 +35,7 @@ export default function Home() {
           ouchSound={ouchSound}
           setCursorState={setCursorState}
           copy={copy}
-          className="col-start-2 row-start-2 col-span-1 row-span-3 bg-gradient-to-tr from-geist-100 via-geist-200 to-geist-100"
+          className="col-start-2 row-start-2 col-span-2 row-span-3 bg-gradient-to-tr from-geist-100 via-geist-200 to-geist-100"
         />
         <Stats
           className="col-start-1 row-start-1 col-span-1 row-span-1 mt-2 ml-2"

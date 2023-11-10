@@ -2,6 +2,7 @@ import { cookies } from "next/headers";
 import { NextRequest } from "next/server";
 
 import { PrismaClient } from "@prisma/client";
+import { formatCount } from "@/utils/formatting";
 const prisma = new PrismaClient();
 
 export async function GET(req: NextRequest) {
@@ -24,6 +25,10 @@ export async function GET(req: NextRequest) {
       },
     },
   });
+  const res = {
+    views: formatCount(stats[0].views),
+    visitors: formatCount(stats[0].visitors),
+  };
 
   if (visitCookie) {
     return new Response(JSON.stringify(stats[0]), {

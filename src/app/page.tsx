@@ -1,12 +1,8 @@
 "use client";
 
-import Image from "next/image";
-import { Github, Twitter, Music } from "@geist-ui/icons";
-import Link from "next/link";
 import { useCopyToClipboard } from "usehooks-ts";
-import Socials from "@/components/Socials";
 import Cursor from "@/components/Cursor";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import ProfileCard from "@/components/ProfileCard";
 import Stats from "@/components/Stats";
 
@@ -19,6 +15,7 @@ export default function Home() {
   useEffect(() => {
     setClickSound(new Audio("/click.wav"));
     setOuchSound(new Audio("/ouch.mp3"));
+    
   }, []);
 
   return (

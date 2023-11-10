@@ -41,7 +41,6 @@ const variants = {
   down: {
     scale: 0.4,
     backgroundColor: "#fff",
-    outline: "2px solid #f0f0f0",
   },
   outLink: {
     scale: 0.4,

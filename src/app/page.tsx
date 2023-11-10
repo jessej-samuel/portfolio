@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import ProfileCard from "@/components/ProfileCard";
 import Stats from "@/components/Stats";
 import Skills from "@/components/Skills";
+import InDev from "@/components/InDev";
 
 export default function Home() {
   const [copiedString, copy] = useCopyToClipboard();
@@ -42,7 +43,8 @@ export default function Home() {
           className="col-start-1 row-start-1 col-span-1 row-span-1 mt-2 ml-2"
           setCursorState={setCursorState}
         />
-        <Skills className="col-start-4 row-start-1 col-span-3 row-span-2 mt-2"/>
+        <Skills className="col-start-4 row-start-1 col-span-3 row-span-2 mt-2" />
+        <InDev className="col-start-11 row-start-5 col-span-2 row-span-1 mt-2 -rotate-90" />
       </main>
     </>
   );

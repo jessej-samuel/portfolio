@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Socials from "./Socials";
 import { motion } from "framer-motion";
+import getAge from "@/utils/age";
 
 type ProfileCardProps = {
   ouchSound: HTMLAudioElement | undefined;
@@ -38,7 +39,8 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
         onMouseEnter={() => setCursorState("hidden")}
         onMouseLeave={() => setCursorState("default")}
       />
-      <h1 className="text-2xl">Jessej Samuel</h1>
+      <h1 className="text-2xl text-white/70 tracking-tight">Jessej Samuel</h1>
+      <p className="text-white/50">{getAge()} y/o software engineer</p>
       <Socials copy={copy} setCursorState={setCursorState} />
     </div>
   );

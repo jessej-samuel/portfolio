@@ -25,7 +25,7 @@ export default function Home() {
       <Cursor state={cursorState} />
 
       <main
-        className="min-h-screen max-h-screen flex justify-center items-center 2xl:items-stretch 2xl:grid grid-cols-12 grid-rows-6 gap-2"
+        className="min-h-screen max-h-screen 2xl:items-stretch 2xl:grid grid-cols-12 grid-rows-6 gap-2"
         onMouseDown={() => {
           clickSound ? clickSound.play() : null;
           setCursorState("down");
@@ -49,7 +49,7 @@ export default function Home() {
           className="col-start-7 row-start-2 col-span-2 row-span-2 mb-2"
           setCursorState={setCursorState}
         />
-        <InDev className="col-start-11 row-start-5 col-span-2 row-span-1 mt-2 -rotate-90" />
+        <InDev className="col-start-11 row-start-5 col-span-2 row-span-1 mt-2 2xl:-rotate-90" />
       </main>
     </>
   );

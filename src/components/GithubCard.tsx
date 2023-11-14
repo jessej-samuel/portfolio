@@ -13,7 +13,7 @@ interface GithubCardProps {
 const GithubCard = ({ className = "", setCursorState }: GithubCardProps) => {
   return (
     <motion.div
-      className={`${className}  bg-gray-800 rounded-xl py-6 px-4 group`}
+      className={`${className}  bg-gray-800 rounded-xl py-4 px-4 group`}
       whileHover={{ scale: 0.95 }}
       onHoverStart={() => setCursorState("down")}
       onHoverEnd={() => setCursorState("default")}
@@ -36,7 +36,7 @@ const GithubCard = ({ className = "", setCursorState }: GithubCardProps) => {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="stroke-white group-hover:stroke-gray-400"
+              className="stroke-neutral-400 group-hover:stroke-white"
             >
               <line x1="7" y1="17" x2="17" y2="7"></line>
               <polyline points="7 7 17 7 17 17"></polyline>

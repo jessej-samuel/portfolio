@@ -8,6 +8,8 @@ import Stats from "@/components/Stats";
 import Skills from "@/components/Skills";
 import InDev from "@/components/InDev";
 import GithubCard from "@/components/GithubCard";
+import Discord from "@/components/Discord";
+import { SWRConfig } from "swr";
 
 export default function Home() {
   const [copiedString, copy] = useCopyToClipboard();
@@ -49,6 +51,7 @@ export default function Home() {
           className="col-start-7 row-start-2 col-span-2 row-span-2 mb-2"
           setCursorState={setCursorState}
         />
+        <Discord className="col-start-2 row-start-1 col-span-2 row-span-1 mt-2" />
         <InDev className="col-start-11 row-start-5 col-span-2 row-span-1 mt-2 2xl:-rotate-90" />
       </main>
     </>

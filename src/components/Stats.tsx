@@ -10,7 +10,7 @@ interface StatsProps {
 const Stats = ({ className = "", setCursorState }: StatsProps) => {
   const { data, error, isLoading } = useSWR("/api/visit", fetcher);
 
-  if (isLoading)
+  if (isLoading || error)
     return (
       <div
         onMouseEnter={() => setCursorState("stats")}
@@ -19,23 +19,9 @@ const Stats = ({ className = "", setCursorState }: StatsProps) => {
           setCursorState("stats");
           e.stopPropagation();
         }}
-        className={`${className}  text-black bg-geist rounded-xl border border-dimgray flex items-center justify-center`}
+        className={`${className}  text-black bg-geist rounded-xl border border-dimgray flex items-center justify-center text-3xl font-bold`}
       >
-        <Loader className="animate-spin" />
-      </div>
-    );
-  if (error)
-    return (
-      <div
-        onMouseEnter={() => setCursorState("stats")}
-        onMouseLeave={() => setCursorState("default")}
-        onMouseUp={(e) => {
-          setCursorState("stats");
-          e.stopPropagation();
-        }}
-        className={`${className} p-5 font-medium text-black bg-gradient-to-tr from-white/60 via-geist-700/90 to-white/60 rounded-xl border border-dimgray`}
-      >
-        <p>Error</p>
+        JS
       </div>
     );
 

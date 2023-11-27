@@ -10,6 +10,7 @@ import InDev from "@/components/InDev";
 import GithubCard from "@/components/GithubCard";
 import Discord from "@/components/Discord";
 import { SWRConfig } from "swr";
+import LinkedIn from "@/components/Linkedin";
 
 export default function Home() {
   const [copiedString, copy] = useCopyToClipboard();
@@ -48,10 +49,14 @@ export default function Home() {
         />
         <Skills className="col-start-4 row-start-1 col-span-3 row-span-2 mt-2" />
         <GithubCard
-          className="col-start-7 row-start-2 col-span-2 row-span-2 mb-2"
+          className="col-start-4 row-start-3 col-span-3 row-span-2"
           setCursorState={setCursorState}
         />
         <Discord className="col-start-2 row-start-1 col-span-2 row-span-1 mt-2" />
+        <LinkedIn
+          className="col-start-7 row-start-4 col-span-2 row-span-2"
+          setCursorState={setCursorState}
+        />
         <InDev className="col-start-11 row-start-5 col-span-2 row-span-1 mt-2 2xl:-rotate-90" />
       </main>
     </>

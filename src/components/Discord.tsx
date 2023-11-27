@@ -13,7 +13,7 @@ type LanyardSWR = {
 };
 
 const colors = {
-  online: "#84CC16",
+  online: "#43b581",
   idle: "#FBBF24",
   dnd: "#DC2626",
   offline: "#222",
@@ -25,7 +25,7 @@ const Discord: FC<DiscordProps> = ({ className, ...props }) => {
     fetcher
   ) as LanyardSWR;
 
-  const [color, setColor] = useState("#84CC16");
+  const [color, setColor] = useState("##43b581");
 
   useEffect(() => {
     if (data?.data.discord_status === "online") {

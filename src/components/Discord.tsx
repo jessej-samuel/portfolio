@@ -21,7 +21,7 @@ const colors = {
 
 const Discord: FC<DiscordProps> = ({ className, ...props }) => {
   const { data, error, isLoading } = useSWR(
-    "/api/activity",
+    "https://api.lanyard.rest/v1/users/768016269269925911",
     fetcher
   ) as LanyardSWR;
 
@@ -46,7 +46,7 @@ const Discord: FC<DiscordProps> = ({ className, ...props }) => {
 
   return (
     <motion.div
-      className={`${className} rounded-xl font-mono text-2xl flex items-center justify-center gap-4`}
+      className={`${className} bg-black rounded-xl font-mono text-2xl flex items-center justify-center gap-4`}
       animate={{
         backgroundColor: color,
       }}

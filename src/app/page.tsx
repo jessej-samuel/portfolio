@@ -11,6 +11,7 @@ import GithubCard from "@/components/GithubCard";
 import Discord from "@/components/Discord";
 import { SWRConfig } from "swr";
 import LinkedIn from "@/components/Linkedin";
+import CurrentLog from "@/components/CurrentLog";
 
 export default function Home() {
   const [copiedString, copy] = useCopyToClipboard();
@@ -44,7 +45,7 @@ export default function Home() {
           className="col-start-2 row-start-2 col-span-2 row-span-3"
         />
         <Stats
-          className="col-start-1 row-start-1 col-span-1 row-span-1 mt-2 ml-2"
+          className="col-start-3 row-start-1 col-span-1 row-span-1 mt-2"
           setCursorState={setCursorState}
         />
         <Skills className="col-start-4 row-start-1 col-span-3 row-span-2 mt-2" />
@@ -52,12 +53,14 @@ export default function Home() {
           className="col-start-4 row-start-3 col-span-3 row-span-2"
           setCursorState={setCursorState}
         />
-        <Discord className="col-start-2 row-start-1 col-span-2 row-span-1 mt-2" />
+        <Discord className="col-start-1 row-start-1 col-span-2 row-span-1 mt-2 ml-2" />
         <LinkedIn
           className="col-start-7 row-start-4 col-span-2 row-span-2"
           setCursorState={setCursorState}
         />
+        <CurrentLog className="col-start-7 row-start-1 col-span-3 row-span-3 mt-2" setCursorState={setCursorState} />
         <InDev className="col-start-11 row-start-5 col-span-2 row-span-1 mt-2 2xl:-rotate-90" />
+        
       </main>
     </>
   );

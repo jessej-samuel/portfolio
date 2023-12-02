@@ -21,6 +21,9 @@ import {
   SiUnity,
   SiVercel,
   SiVisualstudiocode,
+  SiRust,
+  SiLua,
+  SiDocker,
 } from "react-icons/si";
 
 interface SkillsProps {
@@ -53,7 +56,7 @@ const Skills: React.FC<SkillsProps> = ({ className = "" }) => {
       <SiPython className=" text-gunmetal text-4xl m-auto" title="Python" />
       <SiPrisma className=" text-gunmetal text-4xl m-auto" title="Prisma" />
       <SiAndroid className=" text-gunmetal text-4xl m-auto" title="Android" />
-      <SiVercel className=" text-gunmetal text-4xl m-auto" title="Vercel" />
+      <SiDocker className=" text-gunmetal text-4xl m-auto" title="Vercel" />
       <SiUnity className=" text-gunmetal text-4xl m-auto" title="Unity" />
       <SiPostgresql
         className=" text-gunmetal text-4xl m-auto"
@@ -64,13 +67,13 @@ const Skills: React.FC<SkillsProps> = ({ className = "" }) => {
         className=" text-gunmetal text-4xl m-auto"
         title="Visual Studio Code"
       />
-      <SiMicrosoftoffice
+      <SiLua
         className=" text-gunmetal text-4xl m-auto"
         title="Microsoft Office"
       />
       <SiDiscord className=" text-gunmetal text-4xl m-auto" title="Discord" />
       <SiGithub className=" text-gunmetal text-4xl m-auto" title="Github" />
-      <SiStackoverflow
+      <SiRust
         className=" text-gunmetal text-4xl m-auto"
         title="Stackoverflow"
       />
